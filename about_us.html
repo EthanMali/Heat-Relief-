@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Heat Relief Heating and Cooling</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Main style.css">
 </head>
 <style>
@@ -54,19 +55,26 @@
 
     header .logo {
         height: 50px;
-        width: auto;
-        margin-left: 0px;
+        width: 50px;
+        margin-left: -50px;
+        scale: 25%;
+        padding-top: 0%;
+        position: relative;
+        top: -30px;
     }
+
 
     header nav ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
+        position: relative;
     }
 
     header nav ul li {
         margin-left: 1rem;
+        position: relative;
     }
 
     header nav ul li a {
@@ -80,6 +88,32 @@
         color: #00a8cc;
     }
 
+    /* Dropdown styles */
+    header nav ul li .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #003366;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 150px;
+    }
+
+    header nav ul li .dropdown-content a {
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+        font-weight: 500;
+    }
+
+    header nav ul li .dropdown-content a:hover {
+        background-color: #00a8cc;
+    }
+
+    header nav ul li:hover .dropdown-content {
+        display: block;
+    }
+
     .title_font {
         font-family: Montserrat;
         font-optical-sizing: auto;
@@ -91,18 +125,21 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Heat Relief</h1>
+                <a href="index.html">
+                    <img src="logo.png" id="logo" alt="Company Logo">
+                </a>                
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                    <li><a href="quote.html">Get a Quote</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
